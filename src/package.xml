@@ -1,16 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AppMenu</name>
+    </types>
+    <types>
+        <members>Lead</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>HNW_Sales</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>Account</members>
         <members>Campaign</members>
         <members>Case</members>
         <members>Contact</members>
+        <members>Lead__c</members>
         <members>Opportunity</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>Lead__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>HNW_Lead_Dashboard</members>
+        <members>HNW_Lead_Dashboard/adFqcIlDnkQXyYqqzESFztUfoXmkMu</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>HNW_Lead_Details_View</members>
+        <members>HNW_Sales_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Lead__c-Lead Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>HNW_Lead_Path</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
         <members>Admin</members>
+        <members>HNW Sales User</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Central_Region_HNW_Leads</members>
+        <members>North_Region_HNW_Leads</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>HNW_Lead_Reports</members>
+        <members>HNW_Lead_Reports/All_Leads</members>
+        <members>HNW_Lead_Reports/All_Leads1</members>
+        <members>HNW_Lead_Reports/Leads_by_Status</members>
+        <members>HNW_Lead_Reports/New_Activities_with_Leads_Report</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>HNW_Agent</members>
+        <members>HNW_Sales_Executive</members>
+        <name>Role</name>
+    </types>
+    <types>
+        <members>Lead__c</members>
+        <name>SharingRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
     <version>43.0</version>
 </Package>

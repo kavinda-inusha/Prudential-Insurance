@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>HNW_Lead</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>HNW_Lead</fullName>
+        <fields>Name</fields>
+        <fields>Income__c</fields>
+        <fields>Lead_Score__c</fields>
+        <label>HNW Lead</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Income</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsUser__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(BEGINS(OwnerId , &apos;005&apos;), &apos;TRUE&apos;, &apos;FALSE&apos;)</formula>
+        <label>IsUser?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_High_Risk_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is High Risk Lead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  NOT(ISBLANK(First_Name__c)) &amp;&amp;  NOT(ISBLANK(Last_Name__c)) &amp;&amp;  NOT(ISBLANK(Phone__c))  &amp;&amp;  NOT(ISBLANK(Email__c)) &amp;&amp;  NOT(ISBLANK(Income__c))  &amp;&amp;  NOT(ISBLANK (TEXT(Region__c))), IMAGE(&quot;/resource/1537897008000/LeadScore/Level5.jpg&quot;, &quot;Level 5&quot;, 22, 100),
+
+IF (  NOT(ISBLANK(First_Name__c)) &amp;&amp;  NOT(ISBLANK(Last_Name__c)) &amp;&amp;  NOT(ISBLANK(Phone__c))  &amp;&amp;  NOT(ISBLANK(Email__c)), IMAGE(&quot;/resource/1537897008000/LeadScore/Level4.jpg&quot;, &quot;Level 4&quot;, 22, 100),
+
+IF (  NOT(ISBLANK(First_Name__c)) &amp;&amp;  NOT(ISBLANK(Last_Name__c)) &amp;&amp;  NOT(ISBLANK(Phone__c)), IMAGE(&quot;/resource/1537897008000/LeadScore/Level3.jpg&quot;, &quot;Level 3&quot;, 22, 100),
+
+IF(NOT(ISBLANK(First_Name__c)) &amp;&amp;  NOT(ISBLANK(Last_Name__c)), IMAGE(&quot;/resource/1537897008000/LeadScore/Level2.jpg&quot;, &quot;Level 2&quot;, 22, 100),
+
+
+IMAGE(&quot;/resource/1537897008000/LeadScore/Level1.jpg&quot;, &quot;Level 1&quot;, 22, 100)))))</formula>
+        <label>Lead Score</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Awareness - Pre-event</fullName>
+                    <default>true</default>
+                    <label>Awareness - Pre-event</label>
+                </value>
+                <value>
+                    <fullName>Awareness - Day of event</fullName>
+                    <default>false</default>
+                    <label>Awareness - Day of event</label>
+                </value>
+                <value>
+                    <fullName>Discover - Post-event/1st meeting</fullName>
+                    <default>false</default>
+                    <label>Discover - Post-event/1st meeting</label>
+                </value>
+                <value>
+                    <fullName>Evaluate - Meeting w/ advisors</fullName>
+                    <default>false</default>
+                    <label>Evaluate - Meeting w/ advisors</label>
+                </value>
+                <value>
+                    <fullName>Evaluate - Strategy discussion</fullName>
+                    <default>false</default>
+                    <label>Evaluate - Strategy discussion</label>
+                </value>
+                <value>
+                    <fullName>Evaluate - Post- strategy discussion</fullName>
+                    <default>false</default>
+                    <label>Evaluate - Post- strategy discussion</label>
+                </value>
+                <value>
+                    <fullName>Purchase - Medical checkup</fullName>
+                    <default>false</default>
+                    <label>Purchase - Medical checkup</label>
+                </value>
+                <value>
+                    <fullName>Purchase - Close the deal / Docs submission</fullName>
+                    <default>false</default>
+                    <label>Purchase - Close the deal / Docs submission</label>
+                </value>
+                <value>
+                    <fullName>Purchase - Onboarding</fullName>
+                    <default>false</default>
+                    <label>Purchase - Onboarding</label>
+                </value>
+                <value>
+                    <fullName>a</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>a</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Central</fullName>
+                    <default>false</default>
+                    <label>Central</label>
+                </value>
+                <value>
+                    <fullName>East</fullName>
+                    <default>false</default>
+                    <label>East</label>
+                </value>
+                <value>
+                    <fullName>North</fullName>
+                    <default>false</default>
+                    <label>North</label>
+                </value>
+                <value>
+                    <fullName>North-East</fullName>
+                    <default>false</default>
+                    <label>North-East</label>
+                </value>
+                <value>
+                    <fullName>West</fullName>
+                    <default>false</default>
+                    <label>West</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Salutation__c</fullName>
+        <externalId>false</externalId>
+        <label>Salutation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mr</fullName>
+                    <default>false</default>
+                    <label>Mr</label>
+                </value>
+                <value>
+                    <fullName>Mrs</fullName>
+                    <default>false</default>
+                    <label>Mrs</label>
+                </value>
+                <value>
+                    <fullName>Miss</fullName>
+                    <default>false</default>
+                    <label>Miss</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Lead</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Salutation__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Income__c</columns>
+        <columns>Region__c</columns>
+        <columns>Lead_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Central_Region_HNW_Leads_Lead</fullName>
+        <columns>NAME</columns>
+        <columns>Salutation__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Lead_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Income__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>Central Region HNW Leads</label>
+        <queue>Central_Region_HNW_Leads</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>North_Region_HNW_Leads_Lead</fullName>
+        <columns>NAME</columns>
+        <columns>Salutation__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Income__c</columns>
+        <columns>Region__c</columns>
+        <columns>Lead_Status__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>North Region HNW Leads</label>
+        <queue>North_Region_HNW_Leads</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>L-{00000000}</displayFormat>
+        <label>Lead Record Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Leads</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Salutation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Income__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Region__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lead_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
